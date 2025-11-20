@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class TriangleAreaPerimeter {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Input three sides of the triangle
+        System.out.print("Enter side 1: ");
+        double a = sc.nextDouble();
+
+        System.out.print("Enter side 2: ");
+        double b = sc.nextDouble();
+
+        System.out.print("Enter side 3: ");
+        double c = sc.nextDouble();
+
+        // Calculate Perimeter
+        double perimeter = a + b + c;
+
+        // Calculate Area using Heron's Formula
+        double s = perimeter / 2; // semi-perimeter
+        double area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+
+        // Output
+        System.out.println("Perimeter of Triangle = " + perimeter);
+        System.out.println("Area of Triangle = " + area);
+
+        sc.close();
+    }
+}
