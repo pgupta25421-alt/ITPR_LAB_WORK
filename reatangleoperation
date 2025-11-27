@@ -1,0 +1,24 @@
+import java.util.Scanner; //importing the scanner package
+public class RectangleOperation {
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in); //creating the scanner class
+        System.out.println("Enter length"); // length of the rectangle
+        int len=sc.nextInt();
+        if(len<0){
+            System.out.println("Length cannot be negative");
+        }
+        else{
+            System.out.println("Enter breadth"); //breadth of the rectangle
+            int breadth=sc.nextInt();
+            if(breadth<0){
+                System.out.println("Breadth cannot be negative");
+            }
+            else{
+                int area=len*breadth; //calculating the area of the rectangle
+                int perimeter=(2*(len+breadth)); //calculating the perimeter of the rectangle
+                System.out.println("Area of rectangle="+area); //area of the rectangle
+                System.out.println("Perimeter of the rectangle="+perimeter); //perimeter of the rectangle
+            }
+        }
+    }
+}
