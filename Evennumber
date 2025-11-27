@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class EvenNumber {
+// Recursive function to print first n even numbers
+   public static void printEven(int n) {
+        if (n == 0)
+            return; // Base case
+
+        printEven(n - 1);        // Recursive call
+        System.out.print((2 * n) + " "); // Print after recursion to maintain order
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter value of n: ");
+        int n = sc.nextInt();
+
+        System.out.println("First " + n + " even natural numbers are:");
+        printEven(n);
+
+        sc.close();
+    }
+} 
