@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+public class sides 
+    public static void main(String[] args) {
+        // variable to store the three sides of the triangle
+        float a ,b, c;
+        //creating the object of the class
+        Scanner sc=new Scanner(System.in);
+        //inputing the first side
+        System.out.println("enter the first side (in cm)");
+        a= sc.nextFloat();
+        //validating first side
+        if(a<0){
+            System.err.println(" First side cannot be negative");
+        }
+        else {
+            System.out.println("enter the second side (in cm)");
+            b= sc.nextFloat();
+            // validating second side
+            if(b<0){
+                System.err.println("Second side cannot be negative");
+            }
+            else {
+                System.out.println("enter the third side (in cm)");
+                c =sc.nextFloat();
+                //validating third side
+                if(c<0){
+                    System.err.println("Third side cannot be negative");
+                }
+                //verifying the triangle
+                else {
+                    if(a>0 && b>0 && c>0 && (a+b+c==180)){
+                        System.out.println("It is a triangle"); 
+                    }
+                    else{
+                        if(a==b && b==c && c==a) {
+                            System.out.println("It is an equilateral triangle"); //equilateral traingle
+                        }
+                        else{
+                            if((a==b || a==c || b==c) && (a+b>c && a+c>b && b+c>a)){
+                                System.out.println("It is an isosceles triangle"); //isosceles triangle
+                            }
+                            else{
+                                if(a!=b && b!=c && c!=a){
+                                    System.out.println("It is a scalene triangle"); //scalene triangle
+                                }
+                                else{
+                                    System.out.println("The sides do not form a triangle");
+                                }
+                            }
+                        }
+                    }
+                
+                }
+            }
+        }
+        
+    }
+
+
+    
+
